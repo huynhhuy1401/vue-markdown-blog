@@ -11,16 +11,16 @@
             </div>
           </div>
           <footer class="card-footer">
-            <a class="card-footer-item has-text-link">
+            <router-link :to="{name: 'article-detail', params: { id: article._id}}" class="card-footer-item has-text-link">
               <span class="icon">
                 <i class="fas fa-eye"></i>
               </span> View more
-            </a>
-            <a class="card-footer-item has-text-link">
+            </router-link>
+            <router-link :to="{name: 'article-edit', params: { id: article._id}}" class="card-footer-item has-text-link">
               <span class="icon">
                 <i class="fas fa-edit"></i>
               </span> Edit
-            </a>
+            </router-link>
             <a class="card-footer-item has-text-danger is-loading" @click="onDelete">
               <span class="icon">
                 <i class="fas fa-trash"></i>

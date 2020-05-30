@@ -27,7 +27,8 @@ export default {
     isNotInEditOrNewArticleRoute() {
       return (
         this.$route.name !== "new-article" &&
-        this.$route.name !== "edit-article"
+        this.$route.name !== "article-edit" &&
+        this.$route.name !== "article-detail"
       )
     }
   }

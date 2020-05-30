@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import AddArticle from '../views/AddArticle.vue'
 import ArticleDetail from '../views/ArticleDetail.vue'
+import ArticleEdit from '../views/ArticleEdit.vue'
+
 
 Vue.use(VueRouter)
 
@@ -21,6 +23,12 @@ Vue.use(VueRouter)
     path: '/article/:id',
     name: 'article-detail',
     component: ArticleDetail,
+    props: true
+  },
+  {
+    path: '/article/edit/:id',
+    name: 'article-edit',
+    component: ArticleEdit,
     props: true
   },
 ]

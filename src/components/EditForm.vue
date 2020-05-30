@@ -4,19 +4,19 @@
       <div class="field">
         <label class="label">Title</label>
         <div class="control">
-          <input v-model="title" class="input" type="text" placeholder="Title" />
+          <input v-model="preData.title" class="input" type="text" placeholder="Title" />
         </div>
       </div>
       <div class="field">
         <label class="label">Description</label>
         <div class="control">
-          <input v-model="description" class="input" type="text" placeholder="Description" />
+          <input v-model="preData.description" class="input" type="text" placeholder="Description" />
         </div>
       </div>
       <div class="field">
         <label class="label">Markdown</label>
         <div class="control">
-          <textarea v-model="markdown" class="textarea is-medium" placeholder="Markdown"></textarea>
+          <textarea v-model="preData.markdown" class="textarea is-medium" placeholder="Markdown"></textarea>
         </div>
       </div>
       <div class="field is-grouped">
@@ -34,19 +34,13 @@
 <script>
 
 export default {
-  data() {
-    return {
-      title: '',
-      description: '',
-      markdown: ''
-    }
-  },
+  props: ['preData'],
   methods: {
     onSubmit() {
       this.$emit('form-submit', {
-        title: this.title,
-        description: this.description,
-        markdown: this.markdown
+        title: this.preData.title,
+        description: this.preData.description,
+        markdown: this.preData.markdown
       })
     }
   }
